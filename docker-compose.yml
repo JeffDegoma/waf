@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+  web:
+    container_name: nginx_modsec
+    build:
+      context: .
+      # dockerfile is an nginx image
+      dockerfile: ./Dockerfile
+    ports:
+      - '80:80'
+    networks:
+      - default
+
+networks:
+  default:
+
+volumes:
+  conf:
