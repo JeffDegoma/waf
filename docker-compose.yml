@@ -6,7 +6,6 @@ services:
     container_name: nginx_modsec
     build:
       context: .
-      # dockerfile is an nginx image
       dockerfile: ./Dockerfile
     ports:
       - '80:80'
@@ -15,6 +14,3 @@ services:
 
 networks:
   default:
-
-volumes:
-  conf:

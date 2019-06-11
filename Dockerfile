@@ -15,7 +15,7 @@ RUN yum install -y autoconf wget automake bzip2 flex gcc git httpd-devel libaio-
 	./configure --user=root --group=root --with-debug --with-ipv6 --with-http_ssl_module --add-module=/usr/src/modsecurity/nginx/modsecurity --with-http_ssl_module --without-http_access_module --without-http_auth_basic_module --without-http_autoindex_module --without-http_empty_gif_module --without-http_fastcgi_module --without-http_referer_module --without-http_memcached_module --without-http_scgi_module --without-http_split_clients_module --without-http_ssi_module --without-http_uwsgi_module && \
 	make && \
 	make install
-
+#extend image
 FROM centos:7
 COPY --from=0 /usr/src/modsecurity /usr/src/modsecurity
 COPY --from=0 /usr/local/nginx/ /usr/local/nginx/
