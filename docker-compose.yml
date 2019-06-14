@@ -11,8 +11,8 @@ services:
       - '80:80'
     networks:
       - default
-  app:
-    build: app
+  node:
+    build: node
     
 networks:
   default:

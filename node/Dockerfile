@@ -1,7 +1,7 @@
 FROM node:8
 WORKDIR /node
-COPY package.json ./
+COPY package.json /node
 RUN npm i
 COPY . .
-EXPOSE 8080
+EXPOSE 3000
 CMD ["npm", "start"]
