@@ -1,7 +1,7 @@
 const express = require('express');
 
 
-const PORT = 80;
+const PORT = 3000;
 const HOST ='localhost'
 const app = express();
 

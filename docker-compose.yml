@@ -2,7 +2,7 @@ version: '3'
 
 services:
 
-  web:
+  nginx:
     container_name: nginx_modsec
     build:
       context: .
@@ -13,6 +13,12 @@ services:
       - default
   node:
     build: node
+    ports:
+      - '3000:3000'
+    networks:
+      - default
+    depends_on:
+      - nginx
     
 networks:
   default:
